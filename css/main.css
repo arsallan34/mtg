@@ -1,0 +1,843 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: url(../images/other/bachgroud.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.nav-bar {
+  background-color: orange;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 00 3px orange;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#chk1 {
+  display: none;
+}
+i {
+  color: wheat;
+  cursor: pointer;
+}
+
+.nav-bar img {
+  height: 60px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-bar .search-box {
+  flex: 0.6;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 30px;
+  color: orange;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 40px;
+}
+
+.search-box button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0.9);
+  background: orange;
+}
+
+#btn1:hover {
+  zoom: 1.1;
+}
+
+.nav-bar ul {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-bar ul li {
+  text-decoration: none;
+  color: wheat;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  list-style: none;
+}
+.nav-bar a {
+  color: orange;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.fa-facebook {
+  color: orange;
+}
+
+.fa-facebook:hover {
+  color: red;
+}
+
+.fa-instagram {
+  color: orange;
+}
+
+.fa-instagram:hover {
+  color: red;
+}
+
+.fa-at {
+  color: orange;
+}
+
+.fa-at:hover {
+  color: red;
+}
+
+.fa-phone {
+  color: orange;
+}
+
+.fa-phone:hover {
+  color: red;
+}
+
+.fa-bars {
+  font-size: 30px;
+  color: orange;
+}
+
+.fa-bars:hover {
+  color: red;
+}
+
+.nav-bar ul li a:hover {
+  border-bottom: 2px solid cadetblue;
+  color: red;
+}
+
+.nav-bar.menu {
+  font-size: 2.5em;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .search-box button {
+    position: absolute;
+  }
+  .nav-bar ul {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+  .nav-bar.menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-bar img {
+    width: 80px;
+    height: 40px;
+    margin-left: 6px;
+  }
+
+  .nav-bar ul {
+    width: 80%;
+  }
+}
+
+/* all main css  */
+
+/* footer css  */
+.footer {
+  background-color: rgb(231, 156, 4);
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  box-shadow: inset 0 3px rgb(255, 149, 0);
+  background: rgba(4, 0, 255, 0.587);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer .sign {
+  margin-top: 50px;
+  padding-right: 10px;
+  padding-right: 5px;
+}
+
+.footer .sign img {
+  height: 60px;
+  width: 150px;
+}
+
+.footer #fologo {
+  height: 60px;
+  width: 80px;
+  margin-top: 65px;
+  margin-left: 20px;
+  float: left;
+}
+
+.footer .line1 {
+  border-left: 2px solid orange;
+  height: 60px;
+  float: left;
+  margin-top: 60px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.footer .foicon {
+  font-size: 30px;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5;
+  margin-top: 65px;
+  color: orange;
+}
+
+.footer .foicon ul a {
+  margin-right: 25px;
+}
+
+.foicon ul li {
+  list-style: none;
+}
+
+.footer .foicon h4 {
+  color: orange;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.footer .foicon .fa-tiktok {
+  color: orange;
+}
+
+.footer .foicon a:hover {
+  color: red;
+}
+
+.footer .foicon .fa-tiktok:hover {
+  color: red;
+}
+
+/* footer all rights reserved */
+.footer .sign {
+  float: right;
+  font-size: 10px;
+  margin-top: 50px;
+  color: white;
+  padding-right: 10px;
+  padding-right: 5px;
+}
+
+.footer .sign ul {
+  list-style: none;
+}
+
+.footer .sign figcaption {
+  font-size: 11px;
+}
+
+.footer .sign #design {
+  color: white;
+  font-size: 8px;
+}
+
+#myname {
+  font-size: 12px;
+  color: orange;
+}
+
+.footer .sign abbr {
+  font-size: 12px;
+}
+.footer .sign abbr strong {
+  color: orange;
+}
+
+/*footer our service menu */
+.footer .footercont {
+  margin-left: 20px;
+  float: left;
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+.footer .footercont ul {
+  list-style: none;
+}
+.footer .footercont ul li {
+  text-transform: uppercase;
+}
+
+.footer .footercont ul li a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer .footercont ul li a:hover {
+  color: red;
+}
+
+/*footer our addres */
+/* .terms {
+    font-size: 15px;
+    padding: 8px 12px;
+    margin-left: 30px;
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    bottom: 8px;
+    text-transform: uppercase;
+  } */
+
+/* .terms a {
+    color: white;
+  }
+  
+  .terms a:hover {
+    color: red;
+    transform: scale(1.1);
+  } */
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    margin: auto;
+    padding: auto;
+  }
+
+  .footer #fologo {
+    height: 40px;
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .footer .sign {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 30px;
+    display: flex;
+  }
+
+  .footer .sign .ticologo img {
+    width: 80px;
+    height: 40px;
+  }
+
+  .footer .sign .ticologo figcaption {
+    font-size: 10px;
+  }
+
+  .footer .foicon {
+    font-size: 15px;
+  }
+
+  .footer .foicon ul a {
+    margin-right: 1px;
+  }
+
+  .footer .foicon h4 {
+    color: orange;
+    font-size: 11px;
+    padding-bottom: 10px;
+  }
+
+  .footer .line1 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /*footer our service menu */
+  .footer .footercont {
+    margin-left: 5px;
+    font-size: 11px;
+    margin-top: 65px;
+  }
+
+  .footer .addr {
+    margin-top: 65px;
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
+/* footer media qeury */
+@media (max-width: 300px) {
+  .footer {
+    width: 100%;
+  }
+
+  .footer #fologo {
+    display: none;
+  }
+
+  .footer .line1 {
+    display: none;
+  }
+
+  .footer #fologo .footer .sign {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 30px;
+    display: flex;
+  }
+
+  .footer .sign .ticologo img {
+    width: 80px;
+    height: 40px;
+  }
+
+  .footer .sign .ticologo figcaption {
+    font-size: 10px;
+  }
+
+  .footer .foicon {
+    font-size: 15px;
+  }
+
+  .footer .foicon ul a {
+    margin-right: 1px;
+  }
+
+  .footer .foicon h4 {
+    color: orange;
+    font-size: 11px;
+    padding-bottom: 10px;
+  }
+
+  .footer .line1 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /*footer our service menu */
+  .footer .footercont {
+    margin-left: 5px;
+    font-size: 11px;
+    margin-top: 65px;
+  }
+
+  .footer .addr {
+    margin-top: 65px;
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
+/* footer small viewport */
+@media only screen and (max-width: 400px) {
+  .footer {
+    width: 100%;
+  }
+
+  .footer #fologo {
+    height: 30px;
+    width: 40px;
+    margin-left: 5px;
+  }
+
+  .footer .line1 {
+    height: 40px;
+  }
+
+  .footer .sign {
+    text-align: center;
+    width: 40px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 10px;
+    display: flex;
+  }
+
+  .footer .sign .ticologo img {
+    width: 40px;
+    height: 20px;
+  }
+
+  .footer .sign #myname {
+    font-size: 9px;
+  }
+
+  .footer .sign .ticologo figcaption {
+    font-size: 7px;
+  }
+
+  .footer .foicon {
+    font-size: 12px;
+  }
+
+  .footer .foicon h4 {
+    font-size: 9px;
+  }
+
+  /*footer our service menu */
+  .footer .footercont {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .footer .addr {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+
+  .footer .sign abbr {
+    font-size: 8px;
+  }
+
+  .footer .sign small {
+    font-size: 6px;
+  }
+}
+
+/* the main slider fo 5 photos */
+
+.main-body {
+  padding-top: 80px;
+}
+
+.main-body h1 {
+  color: orange;
+  text-align: center;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.myslides {
+  display: none;
+}
+
+.container img {
+  vertical-align: middle;
+  height: 400px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+  border: rgb(211, 144, 0) 5px double;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+/* .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: orange;
+    font-weight: bolder;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  } */
+
+.container .imgtext {
+  color: orange;
+  font-size: 15px;
+  padding: 8px 12px;
+  margin-left: 30px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 8px;
+}
+
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dots:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -moz-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* responsive for main images */
+
+@media only screen and (max-width: 500px) {
+  .dots .imgtext {
+    font-size: 10px;
+  }
+
+  .container img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .dots .imgtext {
+    font-size: 14px;
+  }
+
+  .container img {
+    height: 300px;
+  }
+}
+/* all writing about bus tours */
+
+/* our purpose section */
+
+.purpose {
+  width: 70%;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  text-align: justify;
+  display: block;
+  justify-content: center;
+}
+
+.purinfo img {
+  width: 100%;
+  height: 500px;
+}
+
+.purinfo .content h3 {
+  color: orange;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.purinfo .content p {
+  color: beige;
+  font-size: 25px;
+}
+
+.purinfo .content ul {
+  width: 80%;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.purinfo .content ul li h5 {
+  color: orange;
+  padding: 20px;
+  text-transform: capitalize;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.purinfo .content ul li {
+  color: aliceblue;
+  font-size: 20px;
+}
+
+/* responsive cards for home page */
+.card img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-contener {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: 40px;
+  max-width: fit-content;
+}
+
+.card-contener:hover {
+  transform: scale(1.1);
+  box-shadow: hwb(0 0% 10% / 0.9);
+  cursor: pointer;
+}
+
+.card {
+  width: 325px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.card-contener .content {
+  padding: 5px;
+}
+
+.card-contener .content p {
+  color: black;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.card-contener .content h4 {
+  color: orange;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-contener .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: lightgray;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 16px;
+  color: black;
+}
+
+.card-contener .btn:hover {
+  color: #717171;
+}
+
+.purpose p {
+  color: wheat;
+  font-size: 16px;
+}
+
+.infopol {
+  width: 80%;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infopol h3 {
+  color: orange;
+  font-family: cursive;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.infopol p {
+  color: aliceblue;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.8;
+  font-family: cursive;
+}
+
+.termsc {
+  padding: 30px;
+  text-align: center;
+  margin: 20px;
+}
+
+.termsc h2 {
+  color: orange;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.termsc a {
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
+}
+
+.termsc a:hover {
+  color: red;
+}

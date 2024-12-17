@@ -1,0 +1,599 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background-color: gray;
+  height: 90vh;
+  width: 100%;
+}
+
+p {
+  color: white;
+  font-size: 50px;
+}
+
+.main-body {
+  padding-top: 100px;
+}
+
+.nav-bar {
+  background-color: orange;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 00 3px orange;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#chk1 {
+  display: none;
+}
+i {
+  color: wheat;
+  cursor: pointer;
+}
+
+.nav-bar img {
+  height: 60px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-bar .search-box {
+  flex: 0.6;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 30px;
+  color: orange;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 40px;
+}
+
+.search-box button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0.9);
+  background: orange;
+}
+
+#btn1:hover {
+  zoom: 1.1;
+}
+
+.nav-bar ul {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-bar ul li {
+  list-style: none;
+}
+
+.nav-bar ul li {
+  text-decoration: none;
+  color: wheat;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 10px;
+}
+.nav-bar a {
+  color: orange;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.fa-facebook {
+  color: orange;
+}
+
+.fa-facebook:hover {
+  color: red;
+}
+
+.fa-instagram {
+  color: orange;
+}
+
+.fa-instagram:hover {
+  color: red;
+}
+
+.fa-at {
+  color: orange;
+}
+
+.fa-at:hover {
+  color: red;
+}
+
+.fa-phone {
+  color: orange;
+}
+
+.fa-phone:hover {
+  color: red;
+}
+
+.fa-bars {
+  font-size: 30px;
+  color: orange;
+}
+
+.fa-bars:hover {
+  color: red;
+}
+
+.nav-bar ul li a:hover {
+  border-bottom: 2px solid cadetblue;
+  color: red;
+}
+
+.nav-bar.menu {
+  font-size: 2.5em;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .search-box button {
+    position: absolute;
+  }
+  .nav-bar ul {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+  .nav-bar.menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-bar img {
+    width: 80px;
+    height: 40px;
+    margin-left: 6px;
+  }
+
+  .nav-bar ul {
+    width: 80%;
+  }
+}
+/* footer css  */
+/* footer css  */
+.footer {
+  background-color: rgb(231, 156, 4);
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  box-shadow: inset 0 3px rgb(255, 149, 0);
+  background: rgba(4, 0, 255, 0.587);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer .sign {
+  float: right;
+  font-size: 10px;
+  margin-top: 50px;
+  color: white;
+  padding-right: 10px;
+  padding-right: 5px;
+}
+
+.footer .sign ul {
+  list-style: none;
+}
+
+.footer .sign figcaption {
+  font-size: 11px;
+}
+
+.footer .sign #design {
+  color: white;
+  font-size: 8px;
+}
+
+#myname {
+  font-size: 12px;
+  color: orange;
+}
+
+.footer .sign abbr {
+  font-size: 12px;
+}
+.footer .sign abbr strong {
+  color: orange;
+}
+
+.footer #fologo {
+  height: 60px;
+  width: 80px;
+  margin-top: 65px;
+  margin-left: 20px;
+  float: left;
+}
+
+.footer .line1 {
+  border-left: 2px solid orange;
+  height: 60px;
+  float: left;
+  margin-top: 60px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.footer .foicon {
+  font-size: 30px;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5;
+  margin-top: 65px;
+  color: orange;
+}
+
+.footer .foicon ul a {
+  margin-right: 25px;
+}
+
+.foicon ul li {
+  list-style: none;
+}
+
+.footer .foicon h4 {
+  color: orange;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.footer .foicon .fa-tiktok {
+  color: orange;
+}
+
+.footer .foicon a:hover {
+  color: red;
+}
+
+.footer .foicon .fa-tiktok:hover {
+  color: red;
+}
+
+/*footer our service menu */
+.footer .footercont {
+  margin-left: 20px;
+  float: left;
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+.footer .footercont ul {
+  list-style: none;
+}
+.footer .footercont ul li {
+  text-transform: uppercase;
+}
+
+.footer .footercont ul li a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer .footercont ul li a:hover {
+  color: red;
+}
+
+/*footer our addres */
+.footer .addr {
+  color: orange;
+  font-size: 20px;
+  margin-top: 60px;
+  float: left;
+  margin-left: 100px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 666px) {
+  .footer #fologo {
+    height: 40px;
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .footer .sign {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 30px;
+    display: flex;
+  }
+
+  .footer .sign ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer .sign .ticologo img {
+    width: 80px;
+    height: 40px;
+  }
+
+  .footer .sign .ticologo figcaption {
+    font-size: 10px;
+  }
+
+  .footer .foicon {
+    font-size: 15px;
+  }
+
+  .footer .foicon ul a {
+    margin-right: 1px;
+  }
+
+  .footer .foicon h4 {
+    color: orange;
+    font-size: 11px;
+    padding-bottom: 10px;
+  }
+
+  .footer .line1 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /*footer our service menu */
+  .footer .footercont {
+    margin-left: 5px;
+    font-size: 11px;
+    margin-top: 65px;
+  }
+
+  .footer .addr {
+    margin-top: 65px;
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
+/* footer media qeury */
+@media (max-width: 430px) {
+  .footer #fologo {
+    height: 40px;
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .footer .sign {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 30px;
+    display: flex;
+  }
+
+  .footer .sign ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer .sign .ticologo img {
+    width: 80px;
+    height: 40px;
+  }
+
+  .footer .sign .ticologo figcaption {
+    font-size: 10px;
+  }
+
+  .footer .foicon {
+    font-size: 15px;
+  }
+
+  .footer .foicon ul a {
+    margin-right: 1px;
+  }
+
+  .footer .foicon h4 {
+    color: orange;
+    font-size: 11px;
+    padding-bottom: 10px;
+  }
+
+  .footer .line1 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /*footer our service menu */
+  .footer .footercont {
+    margin-left: 5px;
+    font-size: 11px;
+    margin-top: 65px;
+  }
+
+  .footer .addr {
+    margin-top: 65px;
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
+/* footer small viewport */
+@media (max-width: 360px) {
+  .footer #fologo {
+    height: 30px;
+    width: 40px;
+    margin-left: 5px;
+  }
+
+  .footer .line1 {
+    height: 40px;
+  }
+
+  .footer .sign {
+    text-align: center;
+    width: 40px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 10px;
+    display: flex;
+  }
+
+  .footer .sign .ticologo img {
+    width: 40px;
+    height: 20px;
+  }
+
+  .footer .sign #myname {
+    font-size: 9px;
+  }
+
+  .footer .sign .ticologo figcaption {
+    font-size: 7px;
+  }
+
+  .footer .foicon {
+    font-size: 12px;
+  }
+
+  .footer .foicon h4 {
+    font-size: 9px;
+  }
+
+  /*footer our service menu */
+  .footer .footercont {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .footer .addr {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+
+  .footer .sign abbr {
+    font-size: 8px;
+  }
+
+  .footer .sign small {
+    font-size: 6px;
+  }
+}
+
+/* main gallary part  */
+
+.mygallary {
+  padding-top: 75px;
+}
+
+.mygallary h1 {
+  color: orange;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-text-stroke: 2px black;
+}
+
+.mygallary h1 #sectitle {
+  color: orange;
+  font-size: 25px;
+  -webkit-text-stroke: 2px black;
+}
+
+.gallery {
+  width: 90%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border: rgb(185, 2, 2) 5px double;
+  background-clip: content-box;
+}
+
+.gallery img:hover {
+  transform: scale(0.9) rotate(5deg);
+  box-shadow: 0 32px 100px hwb(0 0% 30% / 0.995);
+}
+
+.fullsize {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.fullsize img {
+  width: 90%;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.fullsize .closingx {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 40px;
+  color: orange;
+  cursor: pointer;
+}
+
+.gallery figcaption {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 2px 2px #0015ff;
+  font-weight: 600;
+  float: right;
+}
